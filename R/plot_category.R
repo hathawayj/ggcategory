@@ -208,7 +208,7 @@ plot_tree <- function(x, chart_colors, legend_location, percent = FALSE) {
   p_out <- p_out +
     treemapify::geom_treemap(color = "black") +
     treemapify::geom_treemap_text(fontface = "italic", place = "centre", reflow = TRUE) +
-    ggplot2::scale_fill_manual(values = piecolors) +
+    ggplot2::scale_fill_manual(values = chart_colors) +
     ggplot2::guides(fill = ggplot2::guide_legend(nrow=2,byrow=TRUE)) +
     ggplot2::labs(fill = "Count") +
     ggplot2::theme(plot.title = ggplot2::element_text(size=14, face="bold"),
