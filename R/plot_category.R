@@ -19,7 +19,6 @@
 #' @import treemapify
 #' @import ggfittext
 #' @import dplyr
-#' # https://github.com/liamgilbey/ggwaffle
 #' @export
 plot_category <- function(x, plot_type = "pie", legend_location = "none", chart_colors = NULL,
                           include_pie_numbers = FALSE, include_bar_text = TRUE,
