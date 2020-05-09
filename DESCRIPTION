@@ -1,5 +1,5 @@
 Package: ggcategory
-Title: What the Package Does (One Line, Title Case)
+Title: Categorical Variables plots using ggplot2
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "J.",
@@ -7,9 +7,21 @@ Authors@R:
            role = c("aut", "cre"),
            email = "hathwayj@byui.edu",
            comment = c(ORCID = "0000-0002-1574-0832"))
-Description: What the package does (one paragraph).
+Description: Simple set of functions to do categorical plots using ggplot2.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/hathawayj/ggcategory
 BugReports: https://github.com/hathawayj/ggcategory/issues
+Imports: 
+    treemapify,
+    stringr,
+    forcats,
+    dplyr,
+    ggfittext,
+    ggplot2
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.1.0
