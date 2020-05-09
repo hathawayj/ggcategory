@@ -253,7 +253,7 @@ plot_waffle <- function(x, chart_colors, legend_location, waffle_cols, percent =
                   y = rep(1:rows_use, col_use)[1:dplyr::n()],
                   group = forcats::fct_reorder(group, sort, .desc = TRUE)) %>%
     ggplot2::ggplot(ggplot2::aes(x, y, fill = group)) +
-    geom_waffle() +
+    ggwaffle::geom_waffle() +
     ggplot2::coord_equal() +
     ggplot2::scale_fill_manual(values = chart_colors) +
     ggplot2::theme_minimal() +
