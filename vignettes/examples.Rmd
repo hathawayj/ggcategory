@@ -1,0 +1,81 @@
+---
+title: "Example of ggcategory plots"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Example of ggcategory plots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ggcategory)
+```
+
+
+```{r}
+x <- dat_table
+
+example_colors <- c("#4c98a4","#938595","#405b9f", "#5494c8", "#1e73cb", "#73849e")
+
+```
+
+```{r}
+plot_pie(x,chart_colors = example_colors, legend_location = "none", percent = TRUE, include_pie_numbers = TRUE)
+plot_pie(x,chart_colors = example_colors, legend_location = "none", percent = FALSE, include_pie_numbers = TRUE)
+```
+
+```{r}
+plot_bar(x,chart_colors = example_colors, legend_location = "none", percent = FALSE)
+plot_bar(x,chart_colors = example_colors, legend_location = "none", percent = TRUE)
+plot_bar(x,chart_colors = example_colors, legend_location = "none", percent = TRUE, include_bar_text = TRUE)
+plot_bar(x,chart_colors = example_colors, legend_location = "none", percent = FALSE, include_bar_text = TRUE)
+```
+
+```{r}
+plot_waffle(x,chart_colors = example_colors, legend_location = "right", waffle_cols = 5)
+plot_waffle(x,chart_colors = example_colors, legend_location = "bottom", waffle_cols = 13)
+```
+
+```{r}
+plot_tree(x,chart_colors = example_colors, percent = TRUE, legend_location = "bottom")
+plot_tree(x,chart_colors = example_colors, percent = TRUE, legend_location = "none")
+plot_tree(x,chart_colors = example_colors, percent = FALSE, legend_location = "none")
+```
+
+
+```{r}
+plot_category(x, plot_type = "pie", legend_location = "none", chart_colors = NULL,
+                          include_pie_numbers = TRUE, percent = TRUE)
+plot_category(x, plot_type = "pie", legend_location = "bottom", chart_colors = NULL,
+                          include_pie_numbers = TRUE, percent = FALSE)
+
+plot_category(x, plot_type = "bar", legend_location = "none", chart_colors = NULL,
+                          include_bar_text = TRUE, percent = FALSE)
+plot_category(x, plot_type = "bar", legend_location = "none", chart_colors = NULL,
+                          include_bar_text = TRUE, percent = TRUE)
+
+
+plot_category(x, plot_type = "tree", legend_location = "none", 
+              chart_colors = NULL, percent = FALSE)
+
+plot_category(x, plot_type = "tree", legend_location = "none", 
+              chart_colors = NULL, percent = TRUE)
+
+
+plot_category(x, plot_type = "waffle", legend_location = "bottom", 
+              chart_colors = NULL, waffle_cols = 12, percent = FALSE)
+plot_category(x, plot_type = "waffle", legend_location = "right", 
+              chart_colors = NULL, waffle_cols = 5, percent = FALSE)
+
+
+
+```
+
+
